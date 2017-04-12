@@ -1,0 +1,121 @@
+html,body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input{
+  border:none;
+  outline: none; /*去掉轮廓线*/
+  /*去除移动端浏览器中表单的默认样式 比例 阴影 3d效果 */
+  -webkit-appearance:none;
+}
+[class^="icon-"]{
+  background: url("../images/sprites.png") no-repeat;
+  background-size: 200px 200px;
+  -webkit-background-size: 200px 200px;
+}
+.category-header {
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  padding: 0 40px;
+  background:url("../images/header-bg.png") repeat-x;
+  background-size: 1px 44px;
+  border-bottom: 1px solid #ccc;
+  .form{
+    width: 100%;
+    height: 44px;
+    padding-top: 7px;
+  }
+  .icon-back,
+  .icon-menu
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 44px;
+    width: 40px;
+    padding: 12px 10px;
+    background-position: -20px 0;
+   background-origin: content-box;
+   background-clip: content-box;
+  }
+  .icon-menu {
+    left: auto;
+    right: 0;
+    background-position: -60px 0;
+  }
+  input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+  }
+
+}
+.category-body{
+  height: 100%;
+  padding-top: 44px;
+  .body-left{
+    float: left;
+    width: 90px;
+    height: 100%;
+    overflow: hidden;
+    ul{
+      li{
+        a {
+          display: block;
+          width: 90px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          border-bottom: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+
+        }
+      }
+      .current {
+        a{
+          color: red;
+          border-right: none;
+        }
+
+      }
+    }
+  }
+  .body-right{
+    overflow: hidden;
+    height: 100%;
+    padding: 10px;
+    .right-in{
+      >a{
+        display: block;
+        >img{
+          width: 100%;
+        }
+      }
+      .hot {
+        margin-top: 10px;
+        ul{
+          li{
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            margin-bottom: 10px;
+            img {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
